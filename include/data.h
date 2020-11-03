@@ -136,6 +136,8 @@ struct struct_CO_Data {
 	lss_transfer_t lss_transfer;
 	lss_StoreConfiguration_t lss_StoreConfiguration;
 #endif	
+
+	void (*raw_can_callback)(Message *);
 };
 
 #define NMTable_Initializer Unknown_state,

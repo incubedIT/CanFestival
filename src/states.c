@@ -115,6 +115,11 @@ void canDispatch(CO_Data* d, Message *m)
 			break;
 #endif
 	}
+
+	if(d->raw_can_callback != NULL)
+	{
+		(*(d->raw_can_callback))(m);
+	}
 }
 
 #define StartOrStop(CommType, FuncStart, FuncStop) \
